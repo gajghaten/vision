@@ -62,6 +62,7 @@ def alexnet(pretrained: bool = False, progress: bool = True, **kwargs: Any) -> A
         pretrained (bool): If True, returns a model pre-trained on ImageNet
         progress (bool): If True, displays a progress bar of the download to stderr
     """
+    print('This is a print statement')
     model = AlexNet(**kwargs)
     if pretrained:
         state_dict = load_state_dict_from_url(model_urls["alexnet"], progress=progress)
